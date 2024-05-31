@@ -6,7 +6,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: Venocyber_Tech,    useMultiFileAuthState,
+    default: Cod3Uchiha_Tech,    useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
     Browsers
