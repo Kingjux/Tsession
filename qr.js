@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Venocyber_Tech,
+	default: Cod3Uchiha_Tech,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Venocyber_Tech = Venocyber_Tech({
+			let Qr_Code_By_Cod3Uchiha_Tech = Cod3Uchiha_Tech({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Venocyber_Tech.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Venocyber_Techr.ev.on("connection.update", async (s) => {
+			Qr_Code_By_Cod3Uchiha_Tech.ev.on('creds.update', saveCreds)
+			Qr_Code_By_CodeUchiha_Techr.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,7 +56,7 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Venocyber_Tech.sendMessage(Qr_Code_By_Venocyber_Tech.user.id, { text: '' + b64data });
+				   let session = await Qr_Code_By_Cod3Uchiha_Tech.sendMessage(Qr_Code_By_Cod3Uchiha_Tech.user.id, { text: '' + b64data });
 	
 				   let MANJIRO_SANO_MD_TEXT = `
 *_Qr Code By Cod3uchiha Tech_*
